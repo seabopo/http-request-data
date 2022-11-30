@@ -77,8 +77,9 @@ func main() {
 
 func httpEcho() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "HTTP REQUEST HEADERS")
-		fmt.Fprintln(w, "--------------------")
+		fmt.Fprintln(w, "HTTP REQUEST DATA")
+		fmt.Fprintln(w, "-----------------")
+		fmt.Fprintln(w, "Request Time :", time.Now().String())
 		fmt.Fprintln(w, "Remote Address :", r.RemoteAddr)
 		fmt.Fprintln(w, "Protocol :", r.Proto)
 		fmt.Fprintln(w, "Host :", r.Host)
@@ -86,7 +87,6 @@ func httpEcho() http.HandlerFunc {
 		fmt.Fprintln(w, "Path :", r.URL.Path)
 
 		for name, values := range r.Header {
-			// Loop over all values for the name.
 			for _, value := range values {
 				fmt.Fprintln(w, name, ":", value)
 			}

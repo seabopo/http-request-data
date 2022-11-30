@@ -28,6 +28,7 @@ _testmain.go
 *.test
 .proc
 *.conf
+*.zip
 
 # IDE files
 *.iml
