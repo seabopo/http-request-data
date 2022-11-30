@@ -10,4 +10,4 @@ http-request-data -listen=:8080
 
 Then visit http://localhost:8080/ in your browser.
 
-This is cloned and modified version of [HashiCorp's HTTP-ECHO](https://github.com/hashicorp/http-echo) repository on Github.
+This is modified version of [HashiCorp's HTTP-ECHO](https://github.com/hashicorp/http-echo) repository on Github.
